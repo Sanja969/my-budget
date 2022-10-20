@@ -2,9 +2,9 @@
 
 - Mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
-## Online demo
+## Heroku
 
-- [live](https://pleasure-budget.herokuapp.com/groups)
+- [Live demo >>](https://pleasure-budget.herokuapp.com/groups)
 
 
 ## Built With
@@ -13,7 +13,7 @@
 
 ## Video presentation
 
-- 
+- [loom](https://www.loom.com/share/77c81b29d25847328c1b76934cb5318a)
 
 
 ### Download it as a ZIP file
