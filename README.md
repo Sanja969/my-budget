@@ -4,7 +4,7 @@
 
 ## Online demo
 
-- [live](https://tranquil-atoll-72718.herokuapp.com/users/sign_in)
+- [live](https://pleasure-budget.herokuapp.com/groups)
 
 
 ## Built With
