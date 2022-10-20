@@ -1,0 +1,22 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <nav role="navigation">
+    <div class="d-flex justify-content-between align-items-center m-0 p-3 text-white">
+      <%= link_to "⇦", auth_path, class:"text-white" %>
+      <h3>REGISTER</h3>
+      <div class="actions">
+        <%= f.submit "Next", id:"sign_up" %>
+      </div>
+    </div>
+  </nav>
+  <div class='fields mb-5'>
+    <%= f.text_area :name, reguired:true, value: '', placeholder: 'Name', class: "form-input" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: '', placeholder: 'Email', class: "form-input"  %>
+    <%= f.password_field :password, autocomplete: "new-password", value: '', placeholder: 'Password', class: "form-input"  %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", value: '', placeholder: 'Confirm password', class: "form-input"  %>
+  </div>
+    <% if @minimum_password_length %>
+      <em class="m-4 text-danger">(Password should have <%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+<% end %>
+
+<%= render "devise/shared/links" %>
