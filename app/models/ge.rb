@@ -1,0 +1,2 @@
+class Ge < ApplicationRecord
+end
