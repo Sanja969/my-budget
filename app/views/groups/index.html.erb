@@ -1,0 +1,19 @@
+<nav role="navigation ">
+  <%= render "header", title: "Categories", other: "🔍" %>
+  <div class="d-flex justify-content-around text-white align-items-center sort pb-3">
+    <p class="m-0">Most recent</p>
+    <p class="m-0">Most ancient</p>
+  </div>
+  <%= form_tag(groups_path, method: :get, class:"search p-3") do %>
+    <%= text_field_tag(:search, params[:search], placeholder:"Search category") %>
+  <% end %>
+</nav>
+
+<div class="w-100 groups">
+<% @groups.each do |group| %>
+ <%=render group %>
+<% end %>
+<div class="w-100 new-group-btn">
+<%= link_to "Add a new category", new_group_path, class: "d-block text-white" %><br />
+</div>
+</div>
