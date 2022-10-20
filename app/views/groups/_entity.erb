@@ -1,0 +1,7 @@
+<div class="group p-3 bg-white m-3 d-flex align-items-center justify-content-between">
+  <div>
+    <%= image_tag @group.image_url if @group.image %>
+    <span class="ml-2"><%= entity.name %></span>
+  </div>
+  <span><%= number_to_currency(entity.amount, :unit => "$") %></span>
+</div>
