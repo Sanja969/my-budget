@@ -14,7 +14,7 @@ class GroupsController < ApplicationController
       @transactions = current_user.entities.search(params[:search])
     end
 
-    @transactions.each do |t, index|
+    @transactions.each do |t|
       @transactions -= [t] unless Ge.where(entity_id: t.id).include? @group.ges.find_by(entity_id: t.id)
     end
   end

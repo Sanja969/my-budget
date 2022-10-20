@@ -18,8 +18,12 @@ class GesController < ApplicationController
       group_id: ge_params[:group_id]
     )
     respond_to do |format|
+      group_id = Group.includes(:ges).find(ge_params[:group_id])
       if @ge.save
-        format.html { redirect_to group_path(Group.includes(:ges).find(ge_params[:group_id])), notice: 'ingridiant was successfully created.' }
+        format.html do
+          redirect_to group_path(group_id),
+                      notice: 'ingridiant was successfully created.'
+        end
       else
         format.html { render :new, status: :unprocessable_entity }
       end

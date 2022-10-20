@@ -7,7 +7,7 @@ class Entity < ApplicationRecord
 
   def self.search(search)
     if search
-      entity = self.where(name: search)
+      entity = Entity.where(name: search)
       entity || ges
     else
       Entity.all

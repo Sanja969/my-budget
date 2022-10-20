@@ -7,7 +7,7 @@ class Group < ApplicationRecord
 
   def self.search(search)
     if search
-      group = self.where(name: search)
+      group = Group.where(name: search)
       group || Group.all
     else
       Group.all
