@@ -1,0 +1,16 @@
+<nav role="navigation">
+  <%= render "groups/header", title: "New Transaction", other: "⇦" %>
+</nav>
+
+<div class="border border-seconday p-5 selection-box">
+  <%= form_with model: @ge, url:entity_ges_path(@entity.id), method: :post, local: true, scope: :ge do |f| %>
+    <div class="mt-5">
+      <%= f.label :'Choose category for created transaction from the list:', style: "display: block" %>
+      <%= f.select :group_id, options_for_select(@groups), {}, class:"form-select form-select-lg mb-3 px-4 py-2 text-white options" %>
+    </div>
+
+    <div class="w-100 new-group-btn start-0">
+      <%= f.submit 'Submit' , class: "d-block text-white"  %>
+    </div>
+  <% end %>
+</div>

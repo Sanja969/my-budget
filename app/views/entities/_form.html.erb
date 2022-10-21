@@ -1,0 +1,25 @@
+<%= form_with(model:entity, class: "") do |form| %>
+    <% if entity.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
+
+      <ul>
+        <% entity.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mx-3">
+    <%= form.text_area :name, placeholder: "Enter transaction name here", class: "form-input mt-5 border border-none", required: true %>
+  </div>
+
+  <div class="mx-3">
+    <%= form.text_area :amount, placeholder: "Enter transaction price here", class: "form-input mt-5 border border-none", required: true %>
+  </div>
+
+  <div class="w-100 new-group-btn">
+    <%= form.submit 'Create' , class: "d-block text-white"  %>
+  </div>
+<% end %>
