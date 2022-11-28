@@ -14,32 +14,7 @@
 ## Video presentation
 
 - [loom](https://www.loom.com/share/77c81b29d25847328c1b76934cb5318a)
-
-
-### Download it as a ZIP file
-
-or
-
-### Clone it in your local machine using GIT
-
-to get a local copy , clone the repository using git clone
-git@github.com:NabilHY/recipe-app.git
-
-After you clone it run the following commands
-
-- cd my_budget
-- bundle install
-- bin/rails db:drop db:create db:migrate
-- bin/rails server
-
-## Authors
-
-👤 **Sanja Mandic**
-
-I am an aspiring web developer from Serbia.
-
-- GitHub: [@sanjaGit](https://github.com/Sanja969)
-- Twitter: [@sanjaTwit](https://twitter.com/SanjaMandic42)
+pdate readme
 - LinkedIn: [@sanjaIn](https://linkedin.com/in/sanja-mandic-823995a2/)
 
 ## 🤝 Contributing
